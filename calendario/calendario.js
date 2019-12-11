@@ -2,7 +2,7 @@
 
 meses=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
 
-lasemana=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"]
+lasemana=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]
 
 diassemana=["lun","mar","mie","jue","vie","sab","dom"];
 
