@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+  font-size: 279%;
+  margin-bottom: .3em;
+}
+
+div {
+    line-height:60px;
+    height:60px;
+    vertical-align:middle;
+	background-color:black;
+	color:white;
+	font-size: 145%;
+}
+
+#form {
+	text-align: center;
+	margin-left: 27%;
+	width: 35%;
+	height: 1%;
+	padding: 70px;
+	background-color:black;
+	color:white;
+	border: solid white;
+	font-size: 170%;
+}
+
+body {
+  background-image: url("../extras/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
