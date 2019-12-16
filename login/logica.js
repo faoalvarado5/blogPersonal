@@ -1,19 +1,9 @@
-function myFunction1() {
+function cuentacreada() {
 
-	window.alert(Cuenta registrada correctamente.);
+	window.alert("Cuenta registrada correctamente.");
 }
 
-function myFunction2() {
+function contrasenacambiada() {
 
-	window.alert(Contrasena cambiada correctamente.);
-}
-
-function myFunction3() {
-
-	window.location("./registrarse.html");
-}
-
-function myFunction4() {
-
-	window.location("./olvidar.html");
+	window.alert("Contrasena cambiada correctamente.");
 }
