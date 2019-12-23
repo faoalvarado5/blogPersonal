@@ -2,6 +2,9 @@
 
   include "Usuario.php";
   include "DAOUsuarios.php";
+  include "ValidacionUsuarios.php";
+  
+  $home = "home.html";
 
   $nombre = $_POST['nombre'];
   $apellido1 = $_POST['apellido1'];
@@ -17,9 +20,11 @@
 
   if ($dao->insertar($usuarioNuevo) == 1) {
     echo "Se ha registrado correctamente.";
+	include_once $home;
   }
   else {
     echo "Ha ocurrido un error en el registro.";
+	include_once $home;
   }
 
 

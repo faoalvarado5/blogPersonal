@@ -2,7 +2,7 @@ CREATE DATABASE login;
 
 CREATE TABLE IF NOT EXISTS usuario (
     usuario VARCHAR(255),
-	nombre VARCHAR(255),
+    nombre VARCHAR(255),
     apellido1 VARCHAR(255),
     apellido2 VARCHAR(255),
     contrasena VARCHAR(255),
