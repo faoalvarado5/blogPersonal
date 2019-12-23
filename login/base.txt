@@ -1,15 +1,15 @@
+CREATE DATABASE login;
+
 CREATE TABLE IF NOT EXISTS usuario (
-    usuario_id INT AUTO_INCREMENT,
     usuario VARCHAR(255),
 	nombre VARCHAR(255),
     apellido1 VARCHAR(255),
     apellido2 VARCHAR(255),
     contrasena VARCHAR(255),
     email VARCHAR(255),
-    telefono INT,
-    fecha date,
-    PRIMARY KEY (usuario_id)
+    telefono VARCHAR(255),
+    fecha VARCHAR(255)
 );
 
 INSERT into usuario (usuario, nombre, apellido1, apellido2, contrasena, email, telefono, fecha) VALUES 
-('faoalvarado5', 'fabrizio', 'alvarado', 'barquero', '123456', 'fao@gmail.com', 88958569, '2019-05-05');
+('faoalvarado5', 'fabrizio', 'alvarado', 'barquero', '123456', 'fao@gmail.com', '88958569', '2019-05-05');

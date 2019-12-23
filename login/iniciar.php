@@ -9,16 +9,14 @@
   $usr = $_POST['usuario'];
   $pwd = $_POST['contrasena'];
 
-  $conexion = conexion::conectar();
-
-  $dao = new DAOUsuarios($conexion);
+  $dao = new DAOUsuarios();
   $usuarioBuscado = $dao->getUser($usr);
 
-  if (!is_null($usuarioBuscado) && $usuarioBuscado->getPassword() == $pwd) {
+  if (!is_null($usuarioBuscado) && $usuarioBuscado->getContrasena() == $pwd) {
     echo "\n Uusario logeado correctamente.";
   }
   else {
-    echo "\n ERROR.";
+    echo "\n ERROR, las credenciales no coinciden.";
   }
 
 ?>
