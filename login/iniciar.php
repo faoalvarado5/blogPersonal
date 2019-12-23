@@ -2,7 +2,6 @@
 
   include "Usuario.php";
   include "DAOUsuarios.php";
-  include "ValidacionUsuarios.php";
 
   $home = "home.html";
 
