@@ -1,68 +1,14 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
-		<link rel="stylesheet" href="estilo.css" />
-		<link rel="text/javascript" href="js.js" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css"/>
+		<link rel="stylesheet" href="estilo.css"/>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
         <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24"></script>
         <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24"></script>
 
-        <script type="text/javascript">
-            window.onload = function() {
-
-                var locations = new Array();
-				const xhttp = new XMLHttpRequest();
-				xhttp.open('GET', 'direcciones.json', true);
-				xhttp.send();
-				xhttp.onreadystatechange = function(){
-
-					if(this.readyState == 4 && this.status == 200){
-
-						let datos = JSON.parse(this.responseText);
-
-						for(let item of datos){
-							var temp = [{ latLng: { lat:   item.latitud  , lng:   item.longitud  } }];
-							locations = locations.concat(temp);
-						}
-
-						var map, dir;
-
-						map = L.map('map', {
-							layers: MQ.mapLayer(),
-							center: [ 10.02929,-84.29120 ],
-							zoom: 15
-						});
-
-						dir = MQ.routing.directions();
-						
-						dir.route({locations}); 
-						
-						map.addLayer(MQ.routing.routeLayer({
-							directions: dir,
-							fitBounds: true
-						}));
-						
-						map.locate({setView: true, watch: true}).on('locationfound', function(e){
-						
-							var marker = L.marker([e.latitude, e.longitude]).bindPopup('Usted esta aqui');
-							var circle = L.circle([e.latitude, e.longitude], e.accuracy/2, {
-								weight: 1,
-								color: 'blue',
-								fillColor: '#cacaca',
-								fillOpacity: 0.2
-							});
-							map.addLayer(marker);
-							map.addLayer(circle);
-						}).on('locationerror', function(e){
-							console.log(e);
-							alert("Location access denied.");
-						});	
-					}
-				}
-            }
-        </script>
+        <script type="text/javascript" src="js.js"></script>
     </head>
 
     <body>
