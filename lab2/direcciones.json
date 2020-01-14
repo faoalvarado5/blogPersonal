@@ -1,13 +1,22 @@
 [
-	{"latitud":10.07192,
-	 "longitud":-84.31205},
+	{"latitud":8.68810,
+	 "longitud":-83.70778},
+	
+	{"latitud":8.68553,
+	 "longitud":-83.70928},
 	 
-	{"latitud":10.07457,
-	 "longitud":-84.31195},
+	{"latitud":8.68265,
+	 "longitud":-83.71126},
 	 
-	{"latitud":10.01692,
-	 "longitud":-84.21885},
+	{"latitud":8.68545,
+	 "longitud":-83.70865},
 	 
-	{"latitud":10.01971,
-	 "longitud":-84.19709}
+	{"latitud":8.68494,
+	 "longitud":-83.70783},
+	 
+	{"latitud":8.68597,
+	 "longitud":-83.70664},
+	 
+	{"latitud":8.68671,
+	 "longitud":-83.70823}
 ]
