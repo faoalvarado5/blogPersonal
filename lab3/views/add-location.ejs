@@ -1,0 +1,41 @@
+<%- include ('partials/header.ejs'); -%>
+<div class="container">
+    <% if (message) { %>
+        <p  ><%= message %></p>
+    <% } %>
+    <script>
+        let variableLocation = <%- JSON.stringify(locations) %>;
+        localStorage.setItem('locations', JSON.stringify(variableLocation));
+    </script>
+    <% if (route) { %>
+        <form action="" method="post" enctype="multipart/form-data">
+            <div >
+                <div >
+                    <br>
+                    <label for="first-name">ID</label>
+                    <input type="text"  name="id" id="id" value="<%= route.id %>" required disabled title="ID no editable.>
+                    <label for="last-name">Nombre</label>
+                    <input type="text"  name="name_of_route" id="name_of_route" value="<%= route.name_of_route %>" required disabled title="ruta no editable.>
+                </div>
+                <div class="form-group col-md-4">
+                    <br><br>
+                    <label>longitud</label>
+                    <input type="text"  name="long_location" id="long_location" required>
+                    <label>latitud</label>
+                    <input type="text"  name="lat_location" id="lat_location" required>
+                    <button type="submit" >AGREGAR</button>
+                </div>
+            </div>
+        </form>
+        <br><br>
+    <% } else { %>
+        <p class="text-center">click <a href="/">aqui</a> para agregar</p>
+    <% } %>
+</div>
+</div>
+    <div class="container" id='map'> </div>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="/addLocation.js"></script>
+</div>
+</body>
+</html>

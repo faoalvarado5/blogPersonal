@@ -1,0 +1,45 @@
+<%- include ('partials/header.ejs'); -%>
+    <div class="container">
+        <% if (message != '') { %>
+            <p ><%= message %></p>
+        <% } %>
+        <form  action="" method="post" enctype="multipart/form-data">
+            <div >
+                <br>
+                <div >
+                    <label>LONGITUD INICIAL</label><br>
+                    <input type="text"  name="longStart"  required>
+                </div>
+                <br>
+                <div >
+                    <label>LATITUD INICIAL</label><br>
+                    <input type="text"  name="latStart" required>
+                </div>
+                <br>
+                <div >
+                    <label>LONGITUD FINAL</label><br>
+                    <input type="text"  name="longFinish" required>
+                </div>
+                <br>
+                <div >
+                    <label>LATITUD FINAL</label><br>
+                    <input type="text"  name="latFinish"  required>
+                </div>
+                <br>
+                <div >
+                    <label># DE RUTA</label><br>
+                    <input type="text"  name="number_of_route" required>
+                </div>
+                <br>
+                <div >
+                    <label>NOMBRE</label><br>
+                    <input type="text"  name="name_of_route" required>
+                </div>
+            </div>
+            <br>
+            <button type="submit" >Agregar  </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

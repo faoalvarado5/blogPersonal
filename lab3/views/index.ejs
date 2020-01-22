@@ -1,0 +1,44 @@
+<%- include ('partials/header.ejs'); -%>
+    <br><div class="container   ">
+        <br><h2>TODAS LAS RUTAS:</h2>
+        <% if (routes.length > 0) {%>
+            <table class="table table-hovered">
+                <thead >
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">#</th>
+                        <th scope="col">LONG 1</th>
+                        <th scope="col">LAT 2</th>
+                        <th scope="col">LONG 1</th>
+                        <th scope="col">LAT 2</th>
+                        <th scope="col">NOMBRE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% routes.forEach((route, index) => { %>
+                        <tr>
+                            <th scope="row"><%= route.id %></th>
+                            <td><%= route.number_of_route %></td>
+                            <td><%= route.longStart %></td>
+                            <td><%= route.latStart %></td>
+                            <td><%= route.longFinish %></td>
+                            <td><%= route.latFinish %></td>
+                            <td><%= route.name_of_route %></td>
+                            <td>
+                                <a href="/addLocation/<%= route.id %>" >AGREGAR PUNTO</a>
+                            </td>
+                            <td>
+                                <a href="/showRoute/<%= route.id %>" >MOSTRAR</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p >Click <a href="/add" >aqui</a> para anadir.</p>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
+
